@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorAuth.Web.Api", "PriorAuth.Web.Api\PriorAuth.Web.Api.csproj", "{D830D60A-914F-441A-AC4D-169E75355522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorAuth.Web.Services", "..\PriorAuth.Web.Services\PriorAuth.Web.Services.csproj", "{8000AAA2-C974-4BDD-9466-BCBE95E0CEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorAuth.Web.Data", "PriorAuth.Web.Data\PriorAuth.Web.Data.csproj", "{9B43AA16-2632-4CEC-AB25-748008B793AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorAuth.Web.Repositories", "PriorAuth.Web.Repositories\PriorAuth.Web.Repositories.csproj", "{A159D0D9-1BF0-425F-A5E4-4E7D402F476B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D830D60A-914F-441A-AC4D-169E75355522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D830D60A-914F-441A-AC4D-169E75355522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D830D60A-914F-441A-AC4D-169E75355522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D830D60A-914F-441A-AC4D-169E75355522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8000AAA2-C974-4BDD-9466-BCBE95E0CEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8000AAA2-C974-4BDD-9466-BCBE95E0CEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8000AAA2-C974-4BDD-9466-BCBE95E0CEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8000AAA2-C974-4BDD-9466-BCBE95E0CEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B43AA16-2632-4CEC-AB25-748008B793AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B43AA16-2632-4CEC-AB25-748008B793AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B43AA16-2632-4CEC-AB25-748008B793AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B43AA16-2632-4CEC-AB25-748008B793AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A159D0D9-1BF0-425F-A5E4-4E7D402F476B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A159D0D9-1BF0-425F-A5E4-4E7D402F476B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A159D0D9-1BF0-425F-A5E4-4E7D402F476B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A159D0D9-1BF0-425F-A5E4-4E7D402F476B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B60F11E-D2CB-4D96-AF81-D415D8D9B578}
+	EndGlobalSection
+EndGlobal
