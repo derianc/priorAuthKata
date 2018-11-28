@@ -30,7 +30,7 @@ namespace PriorAuth.Web.Repositories
         public User CreateUser(User user)
         {
             if (user.Id == 0)
-                user.Id = new Random().Next(1, 100);
+                user.Id = user.GenerateNewId();
 
             _users.Add(user);
 
@@ -74,42 +74,36 @@ namespace PriorAuth.Web.Repositories
             {
                 new User()
                 {
-                    Id = new Random().Next(1, 100),
                     FirstName = "Jean-Luc",
                     LastName = "Picard",
                     UserName = "JPicard"
                 },
                 new User()
                 {
-                    Id = new Random().Next(1, 100),
                     FirstName = "Abraham",
                     LastName = "Lincoln",
                     UserName = "ALincoln"
                 },
                 new User()
                 {
-                    Id = new Random().Next(1, 100),
                     FirstName = "Marilyn",
                     LastName = "Monroe",
                     UserName = "MMonroe"
                 },
                 new User()
                 {
-                    Id = new Random().Next(1, 100),
                     FirstName = "Mother",
                     LastName = "Teresa",
                     UserName = "MTeresa"
                 },
                 new User()
                 {
-                    Id = new Random().Next(1, 100),
                     FirstName = "Oprah",
                     LastName = "Winfrey",
                     UserName = "OWinfrey"
                 },
                 new User()
                 {
-                    Id = new Random().Next(1, 100),
                     FirstName = "Angelina",
                     LastName = "Joelie",
                     UserName = "AJoelie"

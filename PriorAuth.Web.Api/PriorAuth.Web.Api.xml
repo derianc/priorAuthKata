@@ -9,12 +9,11 @@
             User Controller
             </summary>
         </member>
-        <member name="M:PriorAuth.Web.Api.Controllers.UserController.#ctor(PriorAuth.Web.Services.Interfaces.IUserService,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+        <member name="M:PriorAuth.Web.Api.Controllers.UserController.#ctor(PriorAuth.Web.Services.Interfaces.IUserService)">
             <summary>
             Inject services required for user controller
             </summary>
             <param name="userService"></param>
-            <param name="cache"></param>
         </member>
         <member name="M:PriorAuth.Web.Api.Controllers.UserController.GetAllUsers">
             <summary>
