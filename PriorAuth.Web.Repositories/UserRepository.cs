@@ -1,32 +1,124 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Collections.Generic;
+
+using Microsoft.Extensions.Caching.Memory;
 
 using PriorAuth.Web.Data;
 using PriorAuth.Web.Repositories.Interfaces;
+using PriorAuth.Web.Repositories.Extensions;
 
 namespace PriorAuth.Web.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        public async Task<User> CreateUser(User user)
+        private readonly IMemoryCache _cache;
+        private List<User> _users;
+
+        public UserRepository(IMemoryCache cache)
         {
-            throw new NotImplementedException();
+            _cache = cache;
+
+            if (_cache.TryGetValue("userList", out List<User> users))
+                _users = users;
+            else
+                SeedData();
         }
 
-        public async Task<List<User>> GetAllUsers()
+        #region Public Methods
+
+        public User CreateUser(User user)
         {
-            throw new NotImplementedException();
+            if (user.Id == 0)
+                user.Id = new Random().Next(1, 100);
+
+            _users.Add(user);
+
+            return user;
         }
 
-        public async Task<User> GetUserById(int id)
+        public List<User> GetAllUsers()
         {
-            throw new NotImplementedException();
+            return _users;
         }
 
-        public async Task<User> UpdateUser(User user)
+        public User GetUserById(int id)
         {
-            throw new NotImplementedException();
+            return _users.Where(u => u.Id == id).FirstOrDefault();
         }
+
+        public User UpdateUser(User user)
+        {
+            if (user.Id == 0)
+                throw new ArgumentException("user not found");
+
+            // get existing user
+            var existingUser = GetUserById(user.Id);
+
+            if (existingUser == null)
+                throw new ArgumentException("user not found");
+
+            // update existing user detail
+            existingUser.UpdateUser(user);
+
+            return existingUser;
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void SeedData()
+        {
+            _users = new List<User>()
+            {
+                new User()
+                {
+                    Id = new Random().Next(1, 100),
+                    FirstName = "Jean-Luc",
+                    LastName = "Picard",
+                    UserName = "JPicard"
+                },
+                new User()
+                {
+                    Id = new Random().Next(1, 100),
+                    FirstName = "Abraham",
+                    LastName = "Lincoln",
+                    UserName = "ALincoln"
+                },
+                new User()
+                {
+                    Id = new Random().Next(1, 100),
+                    FirstName = "Marilyn",
+                    LastName = "Monroe",
+                    UserName = "MMonroe"
+                },
+                new User()
+                {
+                    Id = new Random().Next(1, 100),
+                    FirstName = "Mother",
+                    LastName = "Teresa",
+                    UserName = "MTeresa"
+                },
+                new User()
+                {
+                    Id = new Random().Next(1, 100),
+                    FirstName = "Oprah",
+                    LastName = "Winfrey",
+                    UserName = "OWinfrey"
+                },
+                new User()
+                {
+                    Id = new Random().Next(1, 100),
+                    FirstName = "Angelina",
+                    LastName = "Joelie",
+                    UserName = "AJoelie"
+                }
+            };
+
+            _cache.Set("userList", _users);
+        }
+
+        #endregion
     }
 }

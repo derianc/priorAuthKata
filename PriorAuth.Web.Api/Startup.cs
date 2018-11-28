@@ -50,6 +50,9 @@ namespace PriorAuth.Web.Api
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            // add memory cache
+            services.AddMemoryCache();
+
             services
                 .AddScoped<IUserService, UserService>()
                 .AddScoped<IUserRepository, UserRepository>();

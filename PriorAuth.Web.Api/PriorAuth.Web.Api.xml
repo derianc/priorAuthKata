@@ -4,5 +4,92 @@
         <name>PriorAuth.Web.Api</name>
     </assembly>
     <members>
+        <member name="T:PriorAuth.Web.Api.Controllers.UserController">
+            <summary>
+            User Controller
+            </summary>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Controllers.UserController.#ctor(PriorAuth.Web.Services.Interfaces.IUserService,Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Inject services required for user controller
+            </summary>
+            <param name="userService"></param>
+            <param name="cache"></param>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Controllers.UserController.GetAllUsers">
+            <summary>
+            Get a list of all users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Controllers.UserController.GetUserById(System.Int32)">
+            <summary>
+            Get single user by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Controllers.UserController.CreateUser(PriorAuth.Web.Data.User)">
+            <summary>
+            Create a new user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Controllers.UserController.UpdateUser(PriorAuth.Web.Data.User)">
+            <summary>
+            Update an existing user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PriorAuth.Web.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PriorAuth.Web.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+            <param name="environment"></param>
+        </member>
+        <member name="P:PriorAuth.Web.Api.Startup.Configuration">
+            <summary>
+            IConfig object
+            </summary>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:PriorAuth.Web.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
     </members>
 </doc>
